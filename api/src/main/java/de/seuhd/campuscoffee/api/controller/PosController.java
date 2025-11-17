@@ -34,7 +34,7 @@ public class PosController {
         );
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id:[0-9]+}")
     public ResponseEntity<PosDto> getById(
             @PathVariable Long id) {
         return ResponseEntity.ok(
