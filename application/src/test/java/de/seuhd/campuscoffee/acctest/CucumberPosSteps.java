@@ -105,8 +105,10 @@ public class CucumberPosSteps {
         assertThat(createdPosList).size().isEqualTo(posList.size());
     }
 
-    @When("I update \"{name}\" description to \"{description}}\"")
-    public void updatePosition(String name, String description) {
+    @When("I update {string} description to {string}")
+    public void i_update_description_to(String string1, String string2) {
+        String name = string1;
+        String description = string2;
         PosDto pos_by_name = retrievePosByName(name);
         PosDto pos_description_updated = new PosDto(
           pos_by_name.id(),
@@ -135,8 +137,10 @@ public class CucumberPosSteps {
                 .containsExactlyInAnyOrderElementsOf(createdPosList);
     }
 
-    @Then("the description of \"{name}\" is \"{description}\"")
-    public void descriptionIs(String name, String description) {
+    @Then("the description of \"{string}\" is \"{string}\"")
+    public void the_description_of_is(String string1, String string2) {
+        String name = string1;
+        String description = string2;
         PosDto pos_by_name = retrievePosByName(name);
         assertThat(pos_by_name.description() == description);
     }

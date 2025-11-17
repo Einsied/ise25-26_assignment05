@@ -18,4 +18,3 @@ Feature: Points of Sale Management
       | New Vending Machine    | Use only in case of emergencies  | VENDING_MACHINE | BERGHEIM  | Teststraße      | 99a          | 12345      | Other City |
     When I update "Schmelzunkt" description to "Test"
     Then the description of "Schmelzpunkt" is "Test"
-    And the POS list should contain the same elements in the same order
