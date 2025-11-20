@@ -137,7 +137,7 @@ public class CucumberPosSteps {
                 .containsExactlyInAnyOrderElementsOf(createdPosList);
     }
 
-    @Then("the description of \"{string}\" is \"{string}\"")
+    @Then("the description of {string} is {string}")
     public void the_description_of_is(String string1, String string2) {
         String name = string1;
         String description = string2;
