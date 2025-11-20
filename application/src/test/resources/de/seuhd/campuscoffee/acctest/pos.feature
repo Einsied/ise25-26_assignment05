@@ -16,5 +16,5 @@ Feature: Points of Sale Management
       | Schmelzpunkt           | Great waffles                    | CAFE            | ALTSTADT  | Hauptstraße     | 90           | 69117      | Heidelberg |
       | Bäcker Görtz           | Walking distance to lecture hall | BAKERY          | INF       | Berliner Str.   | 43           | 69120      | Heidelberg |
       | New Vending Machine    | Use only in case of emergencies  | VENDING_MACHINE | BERGHEIM  | Teststraße      | 99a          | 12345      | Other City |
-    When I update "Schmelzunkt" description to "Test"
+    When I update "Schmelzpunkt" description to "Test"
     Then the description of "Schmelzpunkt" is "Test"
